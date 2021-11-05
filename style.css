@@ -1,0 +1,260 @@
+*,
+::before,
+::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Manrope;
+    background-color: #f9faff;
+}
+
+#header{
+    background-color: #f1f5fe;
+    width: 100vw;
+    height: 50vh;
+    border-bottom-left-radius:7rem;
+}
+
+#header img{
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2rem; 
+}
+
+#textContainer{
+    width: 100%;
+    top: 4rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#textContainer #firstText{
+    color:#2c3256;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+#textContainer #secondText{
+    padding-top: 0.5rem;
+    color:#898ea1;
+}
+
+#contentContainer{
+    position: absolute;
+    top:17rem;
+    left: 30vw;
+    width: 40vw;
+    height: 45vh;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.2);
+}
+
+#sliderContainer{
+    padding:1rem 1rem 1rem 1rem;
+}
+
+#sliderTextContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+#text{
+    font-size: 1rem;
+    color:#858899;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+}
+
+#sliderValue{
+    color: #858899;
+}
+
+#money{
+    font-size: 2.5rem;
+    color:#293454;
+}
+
+#sliderFirst{
+    padding: 1rem 5rem 1rem 3rem;
+}
+
+#sliderFirst .ui-slider {
+    position: relative;
+    background: #e9f0fa;
+    height: 0.5rem;
+    border-radius:1rem;
+}
+
+#sliderFirst .ui-slider .ui-slider-handle {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    top: -0.8rem;
+    background: #7ae9e0;
+    z-index: 2;  
+    box-shadow: 0 8px 16px 0 #c1fff8, 0 6px 20px 0 #c1fff8;
+}
+
+
+#sliderFirst .ui-slider .ui-slider-range {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    background: #24aea1;
+}
+
+#switcher_react{
+    display: flex;
+    color: gray;
+    font-size: 0.7rem;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+}
+
+#switcherText_0{
+    padding-left: 4rem;
+}
+
+#switcherText_3{
+    color:#e39b83;
+    background-color: #ffefef;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+
+.switch-container {
+    width: 3em;
+    height: 1.5em;
+    border-radius: 10em ;
+    box-shadow: 0 0 2px 2px rgba(0,0,0,0.2);
+    position: relative;
+  }
+
+  label {
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 10em;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0.1em;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.2);
+    z-index: 99;
+    cursor: pointer;
+  }
+
+  #switch:checked ~ label {
+    transform: translatex(1.3em) rotatez(360deg);
+  }
+
+  #switch ~ label {
+    transition: all 1s cubic-bezier(0.34, 1.36, 0.2, 1);
+  }
+
+  #switch{
+    display: none;
+  }
+
+  .switch-color {
+    width: 3em;
+    height: 1.5em;
+    background: #c3c3c3;
+    border-radius: 10em;
+    z-index: -1;
+    transition: all 500ms cubic-bezier(0.34, 1.36, 0.2, 1);
+  }
+
+  #switch:checked ~ .switch-color {
+    background: #00e676;
+  }
+
+
+#grid_text_button{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    border-top: 0.1rem solid #f1f0f5;
+}
+
+#grid_text_button input{
+    width: 10rem;
+    height: 4rem;
+    background-color:#4d5983;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    border: none;
+    border-radius:3rem ;
+}
+
+#grid_text_button input:hover{
+    background-color:#293356;
+    transition: 0.3s;
+}
+
+#flex_text_button{
+    display: flex;
+    flex-direction: column
+}
+
+#flex_text_button div{
+    padding: 0.5rem;
+}
+#flex_text_button span{
+    padding-left: 1rem;
+    color:#9da1ad;
+}
+
+@media only screen and (max-width : 800px){
+    #contentContainer{
+        width:95%;
+        left:0.5rem;
+        height: 65vh;
+        
+    }
+
+    #textContainer #firstText{
+        font-size: 1.5rem;
+    }
+
+    #textContainer #secondText{
+        width:55%;
+        
+        
+    }
+
+    #sliderTextContainer{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+
+    #sliderFirst{
+        padding: 1rem 2rem 1rem 2rem;
+    }
+
+    #grid_text_button{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
