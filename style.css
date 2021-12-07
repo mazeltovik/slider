@@ -14,7 +14,7 @@ body{
 #header{
     background-color: #f1f5fe;
     width: 100vw;
-    height: 50vh;
+    height: 25rem;
     border-bottom-left-radius:7rem;
 }
 
@@ -48,10 +48,11 @@ body{
 
 #contentContainer{
     position: absolute;
-    top:17rem;
-    left: 30vw;
-    width: 40vw;
-    height: 45vh;
+    top: 30rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45rem;
+    height: 25rem;
     background-color: white;
     border-radius: 1rem;
     box-shadow: 0 0 5px 5px rgba(0,0,0,0.2);
@@ -121,13 +122,25 @@ body{
     color: gray;
     font-size: 0.7rem;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     margin-bottom: 2rem;
 }
 
+
 #switcherText_0{
-    padding-left: 4rem;
+    padding-left: 1rem;
 }
+
+
+#switcherText_1{
+    padding-left: 1rem;
+}
+
+#switcherText_2{
+    padding-left: 1rem;
+    padding-right: 0.6rem;
+}
+
 
 #switcherText_3{
     color:#e39b83;
@@ -226,20 +239,20 @@ body{
 
 @media only screen and (max-width : 800px){
     #contentContainer{
-        width:95%;
-        left:0.5rem;
-        height: 65vh;
+        width: 90%;
+        left: 50%;
+        height: 30rem;
         
     }
 
     #textContainer #firstText{
         font-size: 1.5rem;
+        text-align: center;
     }
 
     #textContainer #secondText{
-        width:55%;
-        
-        
+        padding: 0 2rem 0 2rem;
+        text-align: center;
     }
 
     #sliderTextContainer{
